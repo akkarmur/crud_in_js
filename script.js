@@ -60,6 +60,14 @@ function insertNewRecord(data) {
   cell9.innerHTML = `<a style="color: blue;" onClick="onDelete(this)">Delete</a>`;
 }
 
+// fror the uncheck checkbox
+function check(checked = false) {
+  const cbs = document.querySelectorAll('input[name="hobbies"]');
+  cbs.forEach((cb) => {
+      cb.checked = checked;
+  });
+}
+
 // reset the all value from the from
 function resetForm() {
   document.getElementById("name").value = "";
@@ -68,7 +76,7 @@ function resetForm() {
   document.getElementById("email").value = "";
   document.getElementById("address").value = "";
   document.myForm.gender.value = "";
-  document.myForm.hobbies.value = "";
+  document.myForm.hobbies.value = check();
   selectedRow = null;
 }
 
