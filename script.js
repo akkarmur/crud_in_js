@@ -12,10 +12,14 @@ function onFormSubmit() {
 // get the hobbies or checkbox
 function checkBox() {
   var checkboxes = document.getElementsByName("hobbies"); 
-   let values = [];
-   checkboxes.forEach((checkbox) => {
-     if (checkbox.checked) {
-       values.push(checkbox.value);
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+      if (checkbox.checked) {
+        values.push(checkbox.value);
+      }
+        
+    });
+    return values;
 }
 
 // get the data
