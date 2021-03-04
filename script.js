@@ -11,10 +11,11 @@ function onFormSubmit() {
 
 // get the hobbies or checkbox
 function checkBox() {
-  var markedCheckbox = document.getElementsByName("hobbies");
-  for (var checkbox of markedCheckbox) {
-    if (checkbox.checked) return checkbox.value;
-  }
+  var checkboxes = document.getElementsByName("hobbies"); 
+   let values = [];
+   checkboxes.forEach((checkbox) => {
+     if (checkbox.checked) {
+       values.push(checkbox.value);
 }
 
 // get the data
